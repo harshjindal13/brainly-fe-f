@@ -9,10 +9,9 @@ export const Signup = () => {
         <Input placeholder="Password"/>
 
         <div className="flex justify-center pt-4">
-          <Button onClick={signup} loading={false} variant="primary" text="Signup" fullWidth={true} />
+          <Button loading={false} variant="primary" fullWidth={true} > Signup </Button>
         </div>
       </div>
-      Signup
     </div>
   );
 };
