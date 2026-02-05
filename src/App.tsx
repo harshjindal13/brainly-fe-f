@@ -1,9 +1,20 @@
-import "./App.css";
+import { Button } from "./components/Button";
+import { Plus, Share } from "lucide-react";
+import { Card } from "./components/Card";
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <div className="flex gap-3">
+        {/* <Button variant="primary" className="flex">
+          <Plus size={17} /> Add Content
+        </Button>
+        <Button variant="secondary">
+          <Share size={17} /> Share
+        </Button> */}
+
+        <Card></Card>
+      </div>
     </>
   );
 }
