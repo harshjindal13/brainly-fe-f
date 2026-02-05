@@ -1,20 +1,12 @@
-import { Button } from "./components/Button";
-import { Plus, Share } from "lucide-react";
-import { Card } from "./components/Card";
+import { Route, Routes } from "react-router";
+import { Dashboard } from "./pages/Dashboard";
 
 function App() {
   return (
     <>
-      <div className="flex gap-3">
-        {/* <Button variant="primary" className="flex">
-          <Plus size={17} /> Add Content
-        </Button>
-        <Button variant="secondary">
-          <Share size={17} /> Share
-        </Button> */}
-
-        <Card></Card>
-      </div>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </>
   );
 }
