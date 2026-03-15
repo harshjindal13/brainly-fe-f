@@ -1,13 +1,13 @@
-import { type ReactElement } from "react";
-// Adjust this import path based on where you created the file in step 1
+import type { MouseEventHandler, ReactNode } from "react";
 import { cn } from "../lib/utils";
 
 interface ButtonProps {
   variant: "primary" | "secondary";
   // text: string;
-  children: React.ReactNode;
+  children: ReactNode;
   // startIcon: ReactElement;
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  type?: "button" | "submit" | "reset";
   fullWidth?: boolean;
   loading?: boolean;
   // // It is best practice to allow a className prop for external overrides
@@ -25,12 +25,14 @@ export function Button({
   children, // • Allows icons, spans, strong tags, etc. • More reusable
   // startIcon,
   onClick,
+  type,
   fullWidth,
   loading,
   className,
 }: ButtonProps) {
   return (
     <button
+      type={type ?? "button"}
       onClick={onClick}
       disabled={loading}
       className={cn(
