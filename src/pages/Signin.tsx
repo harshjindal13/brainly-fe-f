@@ -95,7 +95,7 @@ export const Signin = () => {
             fullWidth={true}
             loading={signinMutation.isPending}
           >
-            Signin
+            Sign in
           </Button>
         </div>
       </form>
