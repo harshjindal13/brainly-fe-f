@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+  --color-blue-link: #0000ee;
+
   --color-purple-light: #d9ddee;
   --color-purple-medium: #9492db;
   --color-purple-dark: #7164c0;
