@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod"; // connects Zod validation to react-hook-form.
-import { useNavigate } from "react-router";
+import { useNavigate, Link } from "react-router";
 
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
@@ -104,8 +104,15 @@ export const Signup = () => {
             fullWidth
             loading={signupMutation.isPending}
           >
-            Signup
+            Sign up
           </Button>
+        </div>
+
+        <div className="text-gray-dark text-md mx-2 py-2">
+          Already a user?{" "}
+          <Link to="/Signin" className="text-blue-link">
+            Sign in
+          </Link>
         </div>
       </form>
 
